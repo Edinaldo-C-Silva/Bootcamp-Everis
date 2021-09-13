@@ -1,7 +1,7 @@
 package com.dio;
 
 import com.dio.model.Gato;
-// Control + Sgift + O - Importa automaticamente
+// Control + Shift + O - Importa automaticamente
 
 public class ProgramaTeste {
 
@@ -9,6 +9,7 @@ public class ProgramaTeste {
 		Gato gato = new Gato();
 		
 		System.out.println(gato);
+		
 		// System.out.println("Hello world");
 		// Yay, fazendo hello world de novo
 	}

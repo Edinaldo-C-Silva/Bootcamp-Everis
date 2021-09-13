@@ -68,6 +68,8 @@ public class Gato {
 		return "Gato [nome=" + nome + ", cor=" + cor + ", idade=" + idade + "]";
 	}
 	
+	
 	// Control + Shift + F - conserta identação
+	// Control + 2 + L - Cria variável para um método
 
 }
