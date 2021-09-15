@@ -1,14 +1,14 @@
 package com.dio;
 
-public class No {
-	private Object objeto;
-	private No Referencia;
+public class No<T> {
+	private T objeto;
+	private No<T> Referencia;
 	
 	public No() {
 		
 	}
 	
-	public No(Object objeto) {
+	public No(T objeto) {
 		this.Referencia = null;
 		this.objeto = objeto;
 	}
@@ -17,15 +17,15 @@ public class No {
 		return objeto;
 	}
 
-	public void setObjeto(Object objeto) {
+	public void setObjeto(T objeto) {
 		this.objeto = objeto;
 	}
 
-	public No getReferencia() {
+	public No<T> getReferencia() {
 		return Referencia;
 	}
 
-	public void setReferencia(No referencia) {
+	public void setReferencia(No<T> referencia) {
 		Referencia = referencia;
 	}
 

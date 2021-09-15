@@ -1,21 +1,22 @@
 package com.dio;
 
-public class Fila {
-	private No refEntrada;
+public class Fila<T> {
+	private No<T> refEntrada;
 
 	public Fila() {
 		this.refEntrada = null;
 	}
 	
-	public void enqueue(No novoNo) {
+	public void enqueue(T obj) {
+		No<T> novoNo = new No<T>(obj);
 		novoNo.setReferencia(refEntrada);
 		refEntrada = novoNo;
 	}
 	
-	public No dequeue() {
+	public T dequeue() {
 		if(!this.isEmpty()) {
-			No primeiroNo = refEntrada;
-			No auxiliar = refEntrada;
+			No<T> primeiroNo = refEntrada;
+			No<T> auxiliar = refEntrada;
 			while(true) {
 				if(primeiroNo.getReferencia() != null) {
 					auxiliar = primeiroNo;
@@ -25,20 +26,20 @@ public class Fila {
 						break;
 				}
 			}
-			return primeiroNo;
+			return (T) primeiroNo.getObjeto();
 		} else {
 			return null;
 		}
 	}
 	
-	public No first() {
+	public T first() {
 		if(!this.isEmpty()) {
-			No primeiroNo = refEntrada;
+			No<T> primeiroNo = refEntrada;
 			while(true) {
 				if(primeiroNo.getReferencia() != null) {
 					primeiroNo = primeiroNo.getReferencia();
 					} else {
-						return primeiroNo;
+						return (T) primeiroNo.getObjeto();
 				}
 			}
 		} else {
@@ -57,7 +58,7 @@ public class Fila {
 	@Override
 	public String toString() {
 		String stringRetorno = "";
-		No auxiliar = refEntrada;
+		No<T> auxiliar = refEntrada;
 		
 		if(refEntrada != null) {
 			while(true) {
