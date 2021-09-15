@@ -2,7 +2,7 @@ package com.dio;
 
 public class No<T> {
 	private T conteudo;
-	No<T> proximoNo;
+	private No<T> proximoNo;
 	
 	public No() {
 		this.proximoNo = null;
