@@ -13,6 +13,7 @@ public class Fila<T> {
 		refEntrada = novoNo;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public T dequeue() {
 		if(!this.isEmpty()) {
 			No<T> primeiroNo = refEntrada;
@@ -32,6 +33,7 @@ public class Fila<T> {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	public T first() {
 		if(!this.isEmpty()) {
 			No<T> primeiroNo = refEntrada;
