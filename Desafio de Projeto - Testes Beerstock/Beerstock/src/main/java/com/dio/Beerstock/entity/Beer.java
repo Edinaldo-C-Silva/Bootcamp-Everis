@@ -45,6 +45,11 @@ public class Beer {
 		return quantity;
 	}
 	
+	// Auto getter não funcionou...?
+	public String getName() {
+		return name;
+	}
+
 	// Auto setter também não?
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
